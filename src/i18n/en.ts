@@ -61,6 +61,7 @@ const language: ILanguage = {
         usernamePlaceholder: 'Enter your username',
         passwordPlaceholder: 'Enter your pasword',
         btnLogin: 'Login',
+        errorLogin: 'Login failed!',
     },
 };
 

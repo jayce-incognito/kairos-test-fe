@@ -8,4 +8,5 @@ export interface ILoginLanguage {
     usernamePlaceholder: string;
     passwordPlaceholder: string;
     btnLogin: string;
+    errorLogin: string;
 }

@@ -6,7 +6,10 @@ import {
 } from 'src/module/User/features/Profile';
 import { Dispatch } from 'redux';
 import { HTTP } from 'src/services';
+import { getMessageError } from 'src/components/Toast';
+import { translateByFieldSelector } from 'src/module/Setting';
 import { ACTION_FETCHED } from './Login.constant';
+import { ILoginLanguage } from './Login.interface';
 
 export const actionFetched = ({ isAuthen }: { isAuthen: boolean }) => ({
     type: ACTION_FETCHED,
@@ -18,15 +21,19 @@ export const actionFetchLogin =
     async (dispatch: Dispatch, getState: () => IRootState) => {
         let isAuthenticated = false;
         let data;
+        const state = getState();
         dispatch(actionFetchingProfile());
         try {
             const res: IProfileUser = await HTTP.apiFetchProfile();
             if (res.id && username === res.username && password === res.password) {
                 isAuthenticated = true;
                 data = res;
+            } else {
+                const { errorLogin }: ILoginLanguage = translateByFieldSelector(state)('login');
+                throw errorLogin;
             }
         } catch (error) {
-            console.log('error', error);
+            alert(getMessageError(error));
         }
         dispatch(actionFetched({ isAuthen: isAuthenticated }));
         dispatch(actionFetchedProfile(data));
