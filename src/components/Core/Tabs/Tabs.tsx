@@ -5,18 +5,28 @@ import styled from 'styled-components';
 import { actionChangeTab } from './Tabs.actions';
 import { IPropsTabs } from './Tabs.interface';
 import { activeTabSelector } from './Tabs.selector';
-import Tab from './Tabs.tab';
+import Tab from './Tabs.tab1';
 
 const Styled = styled.div`
     &.tabs {
         .tab-list {
-            border-radius: 20px;
-            padding: 2px;
         }
         .tab-list .tab {
             margin-top: unset;
             flex: 1 0 auto;
             max-width: 48%;
+        }
+        .tab-list .tab1 {
+            padding: 16px;
+            border-bottom: solid 1px #ffffff;
+        }
+
+        .tab-label {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 30px;
+            color: #ffffff;
         }
     }
 `;
@@ -34,7 +44,7 @@ const Tabs = (props: IPropsTabs) => {
     }, []);
     return (
         <Styled className="tabs" theme={theme}>
-            <ol className="tab-list flex-jcb">
+            <div className="tab-list flex">
                 {children.map((child) => {
                     const { label, tabID } = child.props;
                     return (
@@ -47,7 +57,7 @@ const Tabs = (props: IPropsTabs) => {
                         />
                     );
                 })}
-            </ol>
+            </div>
             <div className="tab-content">
                 {children.map((child) => {
                     if (child.props.tabID !== activeTab) return null;

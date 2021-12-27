@@ -134,9 +134,8 @@ export const GlobalStyled = createGlobalStyle`
         position: relative;
         font-size: ${FONT_SIZES.regular}px;
         line-height: ${FONT_SIZES.regular + 3}px;
-        min-width: 320px;
+        min-width: 1150px;
         margin: auto;
-        overflow: hidden;
         * {
              box-sizing: border-box;
              font-family: 'SF-Pro-Display';
@@ -251,6 +250,12 @@ export const GlobalStyled = createGlobalStyle`
     .flex {
         display: flex;
         align-items: center;
+        flex-direction: row;
+    }
+    .flex-reverse {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
     }
     .flex-jcb {
         display: flex;
@@ -276,6 +281,22 @@ export const GlobalStyled = createGlobalStyle`
             height: 100%;
           }
     }
+    .flex-center-vertical {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flex-center-horizontal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .icon-abs {
         position: absolute;
         left: 0;
@@ -290,8 +311,6 @@ export const GlobalStyled = createGlobalStyle`
         position: relative;
         overflow-x: hidden;
         overflow-y: scroll;
-        max-height: 518px;
-        padding-bottom: 30px;
     }
     .linear-bg {
         background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5), rgba(0,0,0,0.6)) !important;
@@ -331,6 +350,12 @@ export const GlobalStyled = createGlobalStyle`
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .center-abs {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .success {
         color: ${COLORS.green};
@@ -373,5 +398,8 @@ export const GlobalStyled = createGlobalStyle`
             max-width: 48%;
         }
     }
-   
+    b {
+        font-weight: 700;
+    }
+  
 `;

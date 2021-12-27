@@ -63,6 +63,93 @@ const language: ILanguage = {
         btnLogin: 'Login',
         errorLogin: 'Login failed!',
     },
+    home: {
+        sectionFactories: [
+            {
+                id: 'section-1',
+                title: `IT CLOUD SEA’S IT SERVICE`,
+                icon: 'section-1-bg-1.svg',
+                titleContent: 'ASSETS',
+                descContents: [
+                    {
+                        desc: 'Inventory Management',
+                        btnDesc: 'G-Book',
+                    },
+                ],
+            },
+            {
+                id: 'section-2',
+                icon: 'section-2-bg-2.svg',
+                titleContent: 'ACCOUNTING',
+                descContents: [
+                    {
+                        desc: 'Accounting',
+                        btnDesc: 'G-Book',
+                    },
+                ],
+            },
+            {
+                id: 'section-3',
+                icon: 'section-3-bg-3.svg',
+                titleContent: 'HR & ADMIN',
+                descContents: [
+                    {
+                        desc: 'Webmail',
+                        btnDesc: 'E-office',
+                    },
+                    {
+                        desc: 'E-Approval',
+                        btnDesc: 'E-office',
+                    },
+                    {
+                        desc: 'E-Document',
+                        btnDesc: 'E-office',
+                    },
+                    {
+                        desc: 'E-Check in.out',
+                        btnDesc: 'E-office',
+                    },
+                    {
+                        desc: 'Co-worker/Project',
+                        btnDesc: 'E-office',
+                    },
+                ],
+            },
+            {
+                id: 'section-4',
+                icon: 'section-4-bg-4.svg',
+                titleContent: 'SALES',
+                descContents: [
+                    {
+                        desc: `Create Homepag\nYoutube & Instagram`,
+                        btnDesc: 'Fieldmake',
+                    },
+                ],
+            },
+            {
+                id: 'section-5',
+                icon: 'section-5-bg-5.svg',
+                titleContent: 'CUSTOMER',
+                descContents: [
+                    {
+                        desc: `Customer Request Management`,
+                        btnDesc: 'OQUFIE',
+                    },
+                ],
+            },
+            {
+                id: 'section-6',
+                icon: 'section-6-bg-6.svg',
+                titleContent: 'Security',
+                descContents: [
+                    {
+                        desc: `SSL server`,
+                        btnDesc: 'SECTIGO',
+                    },
+                ],
+            },
+        ],
+    },
 };
 
 export default language;

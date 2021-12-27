@@ -1,7 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import profileRoute from '../User/features/Profile/Profile.route';
+import { useSelector } from 'react-redux';
+import HomeSections from './features/Section';
+import HomeHeader from './features/Header';
+import HomeFooter from './features/Footer';
+import { IHomeLanguage } from './Home.interface';
+import { translateByFieldSelector } from '../Setting';
 
 declare global {
     interface Window {
@@ -12,10 +16,12 @@ declare global {
 const Styled = styled.div``;
 
 const Home = () => {
+    const homeLanguage: IHomeLanguage = useSelector(translateByFieldSelector)('home');
     return (
-        <Styled>
-            <p>This is home page</p>
-            <Link to={profileRoute.path}>Link to profile</Link>
+        <Styled className="home-container">
+            <HomeHeader />
+            <HomeSections />
+            <HomeFooter />
         </Styled>
     );
 };

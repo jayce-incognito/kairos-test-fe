@@ -1,3 +1,4 @@
+import { IHomeLanguage } from 'src/module/Home';
 import { ISettingLanguage } from 'src/module/Setting';
 import { ILoginLanguage } from 'src/module/User/features/Login';
 
@@ -5,6 +6,7 @@ export interface ILanguage {
     general: IGeneralLanguage;
     setting: ISettingLanguage;
     login: ILoginLanguage;
+    home: IHomeLanguage;
 }
 
 export interface IGeneralLanguage {
