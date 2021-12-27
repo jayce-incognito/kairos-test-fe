@@ -18,6 +18,7 @@ const Styled = styled.div`
         letter-spacing: 0.01em;
         color: #181949;
         text-transform: uppercase;
+        margin-top: 2%;
     }
     &.section-container .section-content {
         justify-content: space-evenly;

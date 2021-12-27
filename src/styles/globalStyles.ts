@@ -134,7 +134,7 @@ export const GlobalStyled = createGlobalStyle`
         position: relative;
         font-size: ${FONT_SIZES.regular}px;
         line-height: ${FONT_SIZES.regular + 3}px;
-        min-width: 1150px;
+        min-width: 1200px;
         margin: auto;
         * {
              box-sizing: border-box;
